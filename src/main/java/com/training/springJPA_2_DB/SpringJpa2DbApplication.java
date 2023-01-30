@@ -33,12 +33,12 @@ public class SpringJpa2DbApplication implements CommandLineRunner{
         Product prod = new Product();
         prod.setName("prodName");
         prod.setPrice(20_000);
-        
+        System.out.println("saved in DB");
 		calService.save(emp,prod);
 		} catch(Exception e) {
-			System.out.println(e);
+			System.err.println("NOT Saved in DB due to exception");
 		}
-		System.out.println("saved in DB");
+		
 		
 	}
 
